@@ -1,0 +1,15 @@
+$#include "md5.h"
+$#include "json/json_lua.h"
+
+
+class MD5
+{
+public:
+	MD5();
+	void update(const char *input, unsigned int length);
+	void update(const string &str);
+	string toString();
+	void reset();
+};
+
+std::string prettyJson(const std::string& content);

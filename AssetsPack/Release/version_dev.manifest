@@ -1,0 +1,22 @@
+{
+    "packageUrl": "http://www.kurumi.xin:8080/download/ResourceDir/",
+    "strongUpdateDes": {
+        "android": "Android我是强更新描述",
+        "ios": "IOS我是强更新描述"
+    },
+    "remoteManifestUrl": "http://www.kurumi.xin:8080/download/project_dev.manifest",
+    "searchPaths": [],
+    "restartLevel": 0,
+    "remoteVersionUrl": "http://www.kurumi.xin:8080/download/version_dev.manifest",
+    "strongUpdateURL": {
+        "android": "www.baidu.com",
+        "ios": "www.google.com"
+    },
+    "version": "0.0.0",
+    "engineVersion": "3.x dev",
+    "strongUpdateVer": {
+        "android": 0,
+        "ios": 0
+    },
+    "updateDescription": "1:修复bug\n2:增加功能\n"
+}
