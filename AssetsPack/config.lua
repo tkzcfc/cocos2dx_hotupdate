@@ -5,9 +5,14 @@ PLATFORM_WINDOWS = "windows"
 PLATFORM_MAC 	 = "mac"
 PLATFORM_LINUX 	 = "linux"
 
---http://47.75.218.200:1000/91/PKDir/
+local httpRoot = "http://127.0.0.1:7878/game/"
 
 local M = {}
+
+-- 散文件模式
+-- 更新单个差异文件,客户端依次下载所有的单文件
+-- 如果此选项为false则会打包以前所有版本到现在版本的差异zip文件，客户端直接更新zip文件在解压即可
+M["looseFileMode"] = false
 
 -- 加密用到的sign
 M["encryptsign"] = "XXTEA"
@@ -15,19 +20,33 @@ M["encryptsign"] = "XXTEA"
 -- 加密用到的key
 M["encryptkey"] = "2dxLua"
 
--- 资源版本（重要，关系到是否更不更新）
-M["version"] = "0.0.1"
+-- 主版本号（主版本号不同则表示需要强更新）
+M["majorVersion"] = 0
+-- 次版本号
+M["minorVersion"] = 7
+-- 修订号
+M["revisionNumber"] = 1
 
-local dirName = "v_" .. string.gsub(M["version"], "%.", "_")
+-- 资源版本（重要，关系到是否更不更新）
+M["version"] = string.format("%d.%d.%d", M.majorVersion, M.minorVersion, M.revisionNumber)
+
 
 -- 要下载具体内容的地址
-M["packageUrl"] = string.format("http://127.0.0.1:7878/%s/", dirName)
+if M.looseFileMode then
+    -- 散文件模式,每个目录分版本
+    local dirName = string.gsub(M["version"], "%.", "_")
+    M["packageUrl"] = string.format("%s%s/assets/", httpRoot, dirName)
+else
+    -- 整包差异更新,每个zip名称都不一样 直接放在根路径就行
+    M["packageUrl"] = string.format("%s", httpRoot)
+end
+
 
 -- 远程的配置清单文件地址
-M["remoteManifestUrl"] = string.format("http://127.0.0.1:7878/%s/project_dev.manifest", dirName)
+M["remoteManifestUrl"] = string.format("%sproject_dev.manifest", httpRoot)
 
 -- 远程版本文件地址
-M["remoteVersionUrl"] = string.format("http://127.0.0.1:7878/%s/version_dev.manifest", dirName)
+M["remoteVersionUrl"] = string.format("%sversion_dev.manifest", httpRoot)
 
 -- 更新描述
 M["updateDescription"] = [[1:修复bug
@@ -93,7 +112,10 @@ M["ignoreFileList"] =
 {
 }
 
--- 资源文件目录
+-- 游戏资源文件目录
 M["resourceDir"] = lfs.currentdir().."/../cocos2dxPro/"
+
+-- 输出文件目录
+M["outputDir"] = lfs.currentdir().."/archives/"
 
 return M

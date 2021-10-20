@@ -16,7 +16,7 @@ function ViewBase:ctor(app, name)
     if res and binding then
         self:createResoueceBinding(binding)
     end
-
+ 
     if self.onCreate then self:onCreate() end
 end
 
