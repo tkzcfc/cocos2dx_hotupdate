@@ -1,7 +1,13 @@
 
 local helper = require("helper")
 
+-- 修订号最大值
+local REVISION_MAX = 100
 
+
+-- @param major 主版本
+-- @param minor 次版本号
+-- @param revision 修订号
 local function getOutDir(root, major, minor, revision)
     return string.format("%s/v%d/%d_%d_%d/", root, major, major, minor, revision)
 end
@@ -36,6 +42,11 @@ function doit()
 	end
 
     local config = require("config")
+
+    if config["revisionNumber"] > REVISION_MAX then
+        print(string.format("Configuration error: the revision number exceeds the maximum value of %d", REVISION_MAX))
+        return
+    end
 
     -- 加密用到的sign
     local encryptsign = config["encryptsign"]
@@ -130,7 +141,7 @@ function doit()
                     table.insert(difference, helper.decodeJsonFile(assetsFile))
                 else
                     -- break
-                    if revision >= 1000 then break end
+                    if revision >= REVISION_MAX then break end
                 end
                 revision = revision + 1
             until(false)
@@ -219,7 +230,12 @@ function doit()
 
     manifestpath = rootDir .. "/res/version/version_dev.manifest"
     helper.file_write(manifestpath, versionJson)
+
+    return true
 end
 
 
-doit()
+if doit() then
+else
+    print("Packaging failed")
+end
