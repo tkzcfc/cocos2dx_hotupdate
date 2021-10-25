@@ -1,4 +1,5 @@
-$pfile "GameAssetsManagerEvent.pkg"
-$pfile "GameAssetsManagerEventListener.pkg"
-$pfile "GameAssetsManager.pkg"
-$pfile "GameManifest.pkg"
+$pfile "AssetsManager.pkg"
+$pfile "Manifest.pkg"
+$pfile "AssetsEvent.pkg"
+
+$USING_NS_AS;

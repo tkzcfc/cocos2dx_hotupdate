@@ -100,11 +100,6 @@ function doit()
             local t = {}
             t["md5"]       = helper.md5(content)
             t["fileSize"]  = fileSize
-
-            if extension == "zip" and helper.contain(config.compressedFileList, fileName) then
-                t["compressed"] = true
-            end
-
             assets[fileName] = t
 
             -- 写入文件
@@ -199,37 +194,28 @@ function doit()
     local keys = {
         "packageUrl",
         "remoteManifestUrl",
-        "remoteVersionUrl",
-        "engineVersion",
-        "searchPaths",
         "strongUpdateVer",
         "strongUpdateURL",
         "strongUpdateDes",
         "updateDescription",
         "restartLevel",
         "looseFileMode",
+        "version",
     }
     -- 信息组装
     local projectManifest = {}
-    local versionManifest = {}
     for k,v in pairs(keys) do
         projectManifest[v] = config[v]
-        versionManifest[v] = config[v]
     end
     projectManifest["assets"] = assets
 
     local projectJson = helper.toJson(projectManifest)
-    local versionJson = helper.toJson(versionManifest)
 
     -- 清单文件写入
     helper.file_write(outDir .. "project_dev.manifest", projectJson)
-    helper.file_write(outDir .. "version_dev.manifest", versionJson)
 
     local manifestpath = rootDir .. "/res/version/project_dev.manifest"
-    helper.file_write(manifestpath, projectJson)
-
-    manifestpath = rootDir .. "/res/version/version_dev.manifest"
-    helper.file_write(manifestpath, versionJson)
+    --helper.file_write(manifestpath, projectJson)
 
     return true
 end

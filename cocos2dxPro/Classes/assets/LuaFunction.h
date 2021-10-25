@@ -1,16 +1,19 @@
 #pragma once
 
+#include "AssetsHeader.h"
+
 #ifdef __cplusplus
 extern "C" 
 {
 #endif
 #include "lua.h"
 #include "lauxlib.h"
-#include "tolua++.h"
 #ifdef __cplusplus
 }
 #endif
-#include <string>
+//#include <string>
+
+NS_AS_BEGIN
 
 class LuaRef {
 public:
@@ -184,3 +187,4 @@ void LuaFunction::invalid()
 	m_isValid = false;
 }
 
+NS_AS_END

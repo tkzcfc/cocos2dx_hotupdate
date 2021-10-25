@@ -1,22 +1,21 @@
 {
-    "strongUpdateVer": {
-        "android": 0,
-        "ios": 0
-    },
+    "packageUrl": "http://127.0.0.1:7878/game/0_0_1/assets/",
     "strongUpdateDes": {
         "android": "Android我是强更新描述",
         "ios": "IOS我是强更新描述"
     },
     "remoteManifestUrl": "http://127.0.0.1:7878/game/project_dev.manifest",
-    "looseFileMode": false,
-    "searchPaths": {},
+    "looseFileMode": true,
     "remoteVersionUrl": "http://127.0.0.1:7878/game/version_dev.manifest",
     "strongUpdateURL": {
         "android": "www.baidu.com",
         "ios": "www.google.com"
     },
+    "version": "0.0.1",
     "restartLevel": 1,
-    "engineVersion": "3.x dev",
-    "packageUrl": "http://127.0.0.1:7878/game/",
+    "strongUpdateVer": {
+        "android": 0,
+        "ios": 0
+    },
     "updateDescription": "1:修复bug\n2:增加功能\n"
 }

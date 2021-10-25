@@ -1,6 +1,6 @@
 --[[
 
-Copyright (c) 2011-2015 chukong-incc.com
+Copyright (c) 2014-2017 Chukong Technologies Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,6 @@ printInfo("#")
 
 device     = require("cocos.framework.device")
 display    = require("cocos.framework.display")
-audio      = require("cocos.framework.audio")
 transition = require("cocos.framework.transition")
 
 require("cocos.framework.extends.NodeEx")

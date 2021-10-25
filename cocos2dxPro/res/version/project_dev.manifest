@@ -1,23 +1,299 @@
 {
-    "strongUpdateVer": {
-        "android": 0,
-        "ios": 0
-    },
+    "packageUrl": "http://127.0.0.1:7878/game/0_0_1/assets/",
     "strongUpdateDes": {
         "android": "Android我是强更新描述",
         "ios": "IOS我是强更新描述"
     },
     "remoteManifestUrl": "http://127.0.0.1:7878/game/project_dev.manifest",
-    "looseFileMode": false,
-    "searchPaths": {},
-    "assets": {},
+    "looseFileMode": true,
+    "assets": {
+        "src/cocos/cocostudio/DeprecatedCocoStudioFunc.lua": {
+            "fileSize": 3549,
+            "md5": "1da624a702c26ed3c6b6d48908313add"
+        },
+        "src/cocos/framework/extends/UITextField.lua": {
+            "fileSize": 1689,
+            "md5": "c4ba665e101d4065724a83258c9940b0"
+        },
+        "res/Default/LoadingBarFile.png": {
+            "fileSize": 1115,
+            "md5": "53a230f3f1b2d64e87a742debfd489bd"
+        },
+        "src/cocos/framework/extends/UIPageView.lua": {
+            "fileSize": 1441,
+            "md5": "f8798e0c68a4475c6bd8c9479bb06729"
+        },
+        "res/Default/Sprite.png": {
+            "fileSize": 1773,
+            "md5": "380f19a83e69524450a3fc2b466dc275"
+        },
+        "src/cocos/cocos2d/DeprecatedCocos2dEnum.lua": {
+            "fileSize": 4545,
+            "md5": "1de93703ef8cff80f9962b165c068fd6"
+        },
+        "res/LuaExtend.lua": {
+            "fileSize": 1417,
+            "md5": "6f6dfd9ffb2d37dc8507bfe7163bb19d"
+        },
+        "src/app/MyApp.lua": {
+            "fileSize": 149,
+            "md5": "e48d430f64761a9be480ef22e2a2b019"
+        },
+        "src/cocos/framework/transition.lua": {
+            "fileSize": 7745,
+            "md5": "5635538987ad43b26ac4cb76368bba94"
+        },
+        "res/Default/defaultParticle.plist": {
+            "fileSize": 8129,
+            "md5": "531371836de1c2cfd0368cedba9c35d5"
+        },
+        "src/cocos/framework/extends/LayerEx.lua": {
+            "fileSize": 2713,
+            "md5": "7041fe238f163ddaccf7c56fc46cf48f"
+        },
+        "src/cocos/framework/extends/UIEditBox.lua": {
+            "fileSize": 1505,
+            "md5": "be8cac4ee0f008ef3069cb25bfa0e7c8"
+        },
+        "src/cocos/3d/3dConstants.lua": {
+            "fileSize": 209,
+            "md5": "9b7103c1295f8ec33a66de9808e320c0"
+        },
+        "src/cocos/ui/DeprecatedUIEnum.lua": {
+            "fileSize": 5233,
+            "md5": "c974ccf29896938eb69905dcc320220e"
+        },
+        "src/cocos/cocos2d/DrawPrimitives.lua": {
+            "fileSize": 12417,
+            "md5": "d3c36fb818d14da35411dff481e59acd"
+        },
+        "src/packages/mvc/AppBase.lua": {
+            "fileSize": 1929,
+            "md5": "1783b94dd4fdff042bbdd55e098d76d9"
+        },
+        "res/MainScene.lua": {
+            "fileSize": 8317,
+            "md5": "93f83d4b7871b8cba5e2c4934f1147b4"
+        },
+        "src/cocos/framework/extends/MenuEx.lua": {
+            "fileSize": 1281,
+            "md5": "2313e6f2a6022ea81af9ff66935849f2"
+        },
+        "res/SecondScene.lua": {
+            "fileSize": 2289,
+            "md5": "f7a0d57d62c5dfded6386ea6a73e3faa"
+        },
+        "src/packages/mvc/ViewBase.lua": {
+            "fileSize": 1965,
+            "md5": "f2da56fbd36bf29c0f02cd8fcd4e2384"
+        },
+        "src/cocos/cocostudio/DeprecatedCocoStudioClass.lua": {
+            "fileSize": 11061,
+            "md5": "d1431f8a69a2d5b09558ed108089c4a7"
+        },
+        "src/cocos/framework/components/event.lua": {
+            "fileSize": 4921,
+            "md5": "77f7d0aa5b0d33b791d324e95a07c973"
+        },
+        "src/cocos/cocos2d/DeprecatedCocos2dClass.lua": {
+            "fileSize": 62513,
+            "md5": "57f563c29c16cb6178a6fc440121f618"
+        },
+        "src/cocos/ui/DeprecatedUIFunc.lua": {
+            "fileSize": 10085,
+            "md5": "787462c39f85b9fb0970badcc93a7091"
+        },
+        "src/cocos/cocos2d/functions.lua": {
+            "fileSize": 17813,
+            "md5": "11cb5a75cee8116ef4cc927117354a63"
+        },
+        "src/cocos/framework/extends/UISlider.lua": {
+            "fileSize": 1449,
+            "md5": "1bbc61aee32deb1ee0f8e1449033516b"
+        },
+        "src/cocos/cocos2d/bitExtend.lua": {
+            "fileSize": 1697,
+            "md5": "655073ea502538d47e0dfe5b9e2de619"
+        },
+        "src/cocos/init.lua": {
+            "fileSize": 2849,
+            "md5": "3c5d0be6c382fb53d0953e5cfd262e14"
+        },
+        "src/cocos/cocos2d/DeprecatedCocos2dFunc.lua": {
+            "fileSize": 39517,
+            "md5": "d0c9d2f7fcee020dff638e26a757198d"
+        },
+        "src/cocos/cocos2d/Cocos2d.lua": {
+            "fileSize": 13941,
+            "md5": "8bb65b1da60811f6915397df1d696009"
+        },
+        "res/Default/Button_Press.png": {
+            "fileSize": 1153,
+            "md5": "ea5e72abd451a76f62a2906abb7ef4bf"
+        },
+        "src/cocos/cocos2d/luaj.lua": {
+            "fileSize": 973,
+            "md5": "8688cd8c7de1145002f513fb53d5d971"
+        },
+        "src/cocos/extension/DeprecatedExtensionFunc.lua": {
+            "fileSize": 1393,
+            "md5": "4596f37850678e44fb7c3f802a806b64"
+        },
+        "res/HelloWorld.png": {
+            "fileSize": 37864,
+            "md5": "55ea4e952bf080f300379ec26723598b"
+        },
+        "src/cocos/framework/init.lua": {
+            "fileSize": 2753,
+            "md5": "3a32fc07c7683310bc655eda040094f1"
+        },
+        "src/cocos/network/DeprecatedNetworkFunc.lua": {
+            "fileSize": 1161,
+            "md5": "5e5e868228759f42c5421598b395826b"
+        },
+        "src/cocos/framework/display.lua": {
+            "fileSize": 21905,
+            "md5": "b558561dd169fc4818b34ef9ed404348"
+        },
+        "src/cocos/cocostudio/CocoStudio.lua": {
+            "fileSize": 9833,
+            "md5": "b09c16102c713949abe557c7a59c298d"
+        },
+        "src/main.lua": {
+            "fileSize": 269,
+            "md5": "597ff3780196404c73aaf98bc53a6cca"
+        },
+        "src/app/views/SecondScene.lua": {
+            "fileSize": 701,
+            "md5": "e6847078d7b4c671e2182e41cc9ac95b"
+        },
+        "src/app/views/MainScene.lua": {
+            "fileSize": 3545,
+            "md5": "aa2b2cb16ac7216b88269ffc5e0483e6"
+        },
+        "src/cocos/cocos2d/json.lua": {
+            "fileSize": 15741,
+            "md5": "f6e33fbd18d59d73f97e0c06936d5f28"
+        },
+        "src/cocos/cocosdenshion/AudioEngine.lua": {
+            "fileSize": 2789,
+            "md5": "e2ee9743977dc9f791af439d4b01c8c0"
+        },
+        "src/cocos/framework/extends/UIListView.lua": {
+            "fileSize": 2609,
+            "md5": "8c95f4bcfc1963c060ea31305e2943fc"
+        },
+        "res/Default/Button_Normal.png": {
+            "fileSize": 1113,
+            "md5": "5f8329d6525b01810d68e39036e5f066"
+        },
+        "src/cocos/extension/DeprecatedExtensionEnum.lua": {
+            "fileSize": 1445,
+            "md5": "0dc21f9406fc1b41d88d2f68ef9c6c0a"
+        },
+        "src/config.lua": {
+            "fileSize": 689,
+            "md5": "3cd24f6e49a1cf393cc1b25961398a8b"
+        },
+        "src/cocos/cocos2d/luaoc.lua": {
+            "fileSize": 917,
+            "md5": "0a84aa5c0f9ee0f6ffae4cb810a5f91e"
+        },
+        "src/cocos/framework/extends/UIWidget.lua": {
+            "fileSize": 1625,
+            "md5": "4442611b473f2c235ab53debc8c57933"
+        },
+        "src/cocos/framework/device.lua": {
+            "fileSize": 3969,
+            "md5": "2ab4e5bd6f79ebcffad5a24c555afeaf"
+        },
+        "src/cocos/cocostudio/StudioConstants.lua": {
+            "fileSize": 233,
+            "md5": "9ae53a5520cc432bfb4161db2a882d9e"
+        },
+        "src/packages/mvc/init.lua": {
+            "fileSize": 113,
+            "md5": "97d14b938ab61ce2e4b1ef0c9ee9e8d9"
+        },
+        "res/Default/Button_Disable.png": {
+            "fileSize": 1111,
+            "md5": "fa79821349dd686f516187283bc2fb8c"
+        },
+        "src/cocos/ui/GuiConstants.lua": {
+            "fileSize": 3741,
+            "md5": "2ec55e2c0e62a44dcaf428f3beac701b"
+        },
+        "src/cocos/framework/extends/NodeEx.lua": {
+            "fileSize": 5409,
+            "md5": "957fae133292a782cb08649e28ae615c"
+        },
+        "src/cocos/framework/extends/SpriteEx.lua": {
+            "fileSize": 2233,
+            "md5": "b9029d2e8026323b91fab24d03544730"
+        },
+        "src/cocos/physics3d/physics3d-constants.lua": {
+            "fileSize": 273,
+            "md5": "b361d8026841aa7dcd42a9bb4f37f651"
+        },
+        "src/cocos/framework/extends/UICheckBox.lua": {
+            "fileSize": 1497,
+            "md5": "ad2d21f36db15ef1f100c5457f7dcdb5"
+        },
+        "src/cocos/cocos2d/Cocos2dConstants.lua": {
+            "fileSize": 17365,
+            "md5": "6f3db3e3904e6ca99f5a9d842854010f"
+        },
+        "src/cocos/controller/ControllerConstants.lua": {
+            "fileSize": 737,
+            "md5": "33d15aa0938bbfcda759a50501538f77"
+        },
+        "src/cocos/network/NetworkConstants.lua": {
+            "fileSize": 541,
+            "md5": "1af9459fecd8fd60536ac5e1a889c971"
+        },
+        "src/cocos/network/DeprecatedNetworkEnum.lua": {
+            "fileSize": 545,
+            "md5": "da5942e70dbd9375d5fdba509012fc17"
+        },
+        "src/cocos/spine/SpineConstants.lua": {
+            "fileSize": 221,
+            "md5": "89fb8f3fa538265bfca5bfda3e828b78"
+        },
+        "src/cocos/network/DeprecatedNetworkClass.lua": {
+            "fileSize": 593,
+            "md5": "0295ffea43893a6ff97cfa22fffd69d8"
+        },
+        "src/cocos/extension/DeprecatedExtensionClass.lua": {
+            "fileSize": 4981,
+            "md5": "65b6b961a7042bdd4bbd0614a3d6ebeb"
+        },
+        "src/cocos/framework/package_support.lua": {
+            "fileSize": 4137,
+            "md5": "4395988ee8bea7a8857c82626397b48f"
+        },
+        "src/cocos/cocos2d/deprecated.lua": {
+            "fileSize": 517,
+            "md5": "9610e975c4717b805ee4bfc5fa9b8847"
+        },
+        "src/cocos/extension/ExtensionConstants.lua": {
+            "fileSize": 2081,
+            "md5": "8518ff6e5b9d9fcb3e808bb39858e0f7"
+        },
+        "src/cocos/framework/extends/UIScrollView.lua": {
+            "fileSize": 2281,
+            "md5": "4dceaf41143b454ecea9a85660040a54"
+        }
+    },
     "remoteVersionUrl": "http://127.0.0.1:7878/game/version_dev.manifest",
     "strongUpdateURL": {
         "android": "www.baidu.com",
         "ios": "www.google.com"
     },
+    "version": "0.0.1",
     "restartLevel": 1,
-    "engineVersion": "3.x dev",
-    "packageUrl": "http://127.0.0.1:7878/game/",
+    "strongUpdateVer": {
+        "android": 0,
+        "ios": 0
+    },
     "updateDescription": "1:修复bug\n2:增加功能\n"
 }

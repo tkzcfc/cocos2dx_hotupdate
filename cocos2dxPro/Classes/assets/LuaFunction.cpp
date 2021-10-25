@@ -1,5 +1,7 @@
 ﻿#include "LuaFunction.h"
-#include <assert.h>
+#include "scripting/lua-bindings/manual/CCLuaEngine.h"
+
+NS_AS_BEGIN
 
 LuaRef::LuaRef() 
 	: L(nullptr)
@@ -8,9 +10,11 @@ LuaRef::LuaRef()
 }
 
 LuaRef::LuaRef(lua_State* aL, int index) 
-	: L(aL)
-	, m_ref(LUA_NOREF)
+	: m_ref(LUA_NOREF)
+	//, L(aL)
 {
+	L = cocos2d::LuaEngine::getInstance()->getLuaStack()->getLuaState();
+
 	lua_pushvalue(L, index);
 	m_ref = luaL_ref(L, LUA_REGISTRYINDEX);
 }
@@ -70,7 +74,9 @@ void LuaRef::reset(lua_State* aL, int index)
 	unref();
 	if (aL != nullptr) 
 	{
-		L = aL;
+		//L = aL;
+		L = cocos2d::LuaEngine::getInstance()->getLuaStack()->getLuaState();
+
 		lua_pushvalue(L, index);
 		m_ref = luaL_ref(L, LUA_REGISTRYINDEX);
 	}
@@ -365,3 +371,5 @@ int LuaFunction::checktype(int index/* = 0*/)
 	assert(index < MAX_RET_ARGS_COUNT && index >= 0);
 	return m_retValues[index].type;
 }
+
+NS_AS_END

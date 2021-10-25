@@ -1,0 +1,101 @@
+$#include "assets/AssetsManager.h"
+
+
+namespace assets {
+
+class AssetsManager
+{
+public:
+    
+    // Update states
+    enum State
+    {
+        UNCHECKED,
+
+		// 正在检查更新
+		CHECK_UPDATE,
+
+		// 等待更新
+		WAIT_FOR_UPDATE,
+
+		// 正在更新
+        UPDATING,
+		
+		// 已经是最新版本
+        UP_TO_DATE,
+    };
+    
+	
+	AssetsManager(const std::string& manifestUrl, const std::string& storagePath, const std::string& platformName);
+
+	virtual ~AssetsManager();
+	
+    /** @brief  检查版本并准备升级,此函数仅下载详细清单文件并且对比相应差异
+	准备完毕后会发送 UPDATE_FILE_SIZE 事件,通知客户端需要更新的文件大小,用户调用 startUpdate 函数才开始真正的文件下载
+     */
+    bool checkUpdate(LuaFunction handle);
+
+	/** @brief  开始更新,必须先调用 checkUpdate 函数检查可以更新才调用本函数
+	 */
+	bool startUpdate(LuaFunction handle);
+
+	/** @brief  更新修复,清空相应的文件/目录
+	 */
+	void repair();
+
+	/** @brief 获取需要更新的总大小
+	*/
+	double getTotalSize();
+	
+	/** @brief 获取已经下载的大小
+	*/
+	double getDownloadSize();
+	
+	float getUpdatePercent();
+
+
+    /** @brief 获取存储路径
+     */
+    const std::string& getStoragePath() const;
+    
+    /** @brief 获取本地清单文件
+     */
+    assets::Manifest* getLocalManifest() const;
+    
+    /** @brief 获取远程清单文件
+     */
+    assets::Manifest* getRemoteManifest() const;
+    
+    /** @brief 获取最大同时进行任务个数
+     */
+    int getMaxConcurrentTask();
+    
+    /** @brief 设置最大同时进行任务个数
+     */
+    void setMaxConcurrentTask(const int max);
+	
+	/** @brief 自定义资源校验函数
+	 */
+	void setVerifyLuaCallback( LuaFunction handle);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

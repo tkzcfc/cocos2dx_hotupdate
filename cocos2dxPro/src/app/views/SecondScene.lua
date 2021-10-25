@@ -16,6 +16,8 @@ function SecondScene:onCreate()
 
     self.uiPage.root:setContentSize(cc.Director:getInstance():getVisibleSize())
     ccui.Helper:doLayout(self.uiPage.root)
+	
+	print("second version 0.0.3")
 end
 
 return SecondScene

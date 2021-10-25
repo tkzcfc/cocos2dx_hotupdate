@@ -1,0 +1,54 @@
+$#include "assets/Manifest.h"
+
+namespace assets {
+
+struct ManifestAsset {
+    std::string md5;
+    std::string path;
+    bool compressed;
+    int downloadSize;
+    int downloadState;
+
+	// 清单文件中fileSize字段
+	unsigned int fileSize;
+};
+
+class Manifest
+{
+public:
+    
+    
+    /** @brief Check whether the manifest have been fully loaded
+     */
+    bool isLoaded() const;
+	
+	// 获取强更新地址
+	const std::string& getStrongUpdateURL() const;
+    
+	// 获取更新描述
+	const std::string& getUpdateDescription() const;
+
+	// 获取强更新描述
+	const std::string& getStrongUpdateDescription() const;
+
+	// 重新启动等级
+	// 0 不需要重启  1 程序自动重启 2 用户重启
+	int getRestartLevel() const;
+
+	// 是否是散文件更新
+	bool isLooseFileMode() const;
+
+    /** @brief Gets remote package url.
+     */
+    const std::string& getPackageUrl() const;
+    
+    /** @brief Gets remote manifest file url.
+     */
+    const std::string& getManifestFileUrl() const;
+    
+    /** @brief Gets manifest version.
+     */
+    const std::string& getVersion() const;
+};
+
+}
