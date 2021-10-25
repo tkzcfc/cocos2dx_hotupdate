@@ -4,5 +4,6 @@ AssetsPack 资源打包工具
 
 cocos2dxPro cocos2dx代码
 
-更新逻辑主要由cocos2dx-3.17 extensions/assets-manager修改而来
-新增功能:更新描述,更新文件大小提示
+支持差异散文件更新和差异整包更新
+
+引擎版本cocos2dx-4.0
