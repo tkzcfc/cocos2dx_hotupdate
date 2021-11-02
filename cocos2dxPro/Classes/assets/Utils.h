@@ -23,7 +23,7 @@ public:
 
 	static bool decompressZip(const std::string &zip, std::string& errorStr);
 
-	static std::string basename(const std::string& path);
+	static std::string getBasename(const std::string& path);
 
 	static void adjustPath(std::string &path);
 

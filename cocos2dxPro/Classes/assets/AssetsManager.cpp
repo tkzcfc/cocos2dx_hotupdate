@@ -413,7 +413,7 @@ void AssetsManager::decompressDownloadedZip(const std::string &customId, const s
         }
         else
         {
-			std::string errorMsg = cocos2d::StringUtils::format("Unable to decompress file : %s\nerror: %s", dataInner->zipFile, dataInner->error);
+			std::string errorMsg = cocos2d::StringUtils::format("Unable to decompress file : %s\nerror: %s", dataInner->zipFile.c_str(), dataInner->error.c_str());
 
 			Utils::removeFile(dataInner->zipFile);
             fileError(dataInner->customId);
@@ -704,7 +704,7 @@ void AssetsManager::queueDowload()
         
         m_currConcurrentTask++;
         DownloadUnit& unit = m_downloadUnits[key];
-        m_fileUtils->createDirectory(Utils::basename(unit.storagePath));
+        m_fileUtils->createDirectory(Utils::getBasename(unit.storagePath));
         m_downloader->createDownloadFileTask(unit.srcUrl, unit.storagePath, unit.customId);
         
         m_tempManifest->setAssetDownloadState(key, Manifest::DownloadState::DOWNLOADING);

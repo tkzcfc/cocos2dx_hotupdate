@@ -222,7 +222,7 @@ bool Utils::decompressZip(const std::string &zip, std::string& errorStr)
 		{
 			//There are not directory entry in some case.
 			//So we need to create directory when decompressing file entry
-			if (!cocos2d::FileUtils::getInstance()->createDirectory(basename(fullPath)))
+			if (!cocos2d::FileUtils::getInstance()->createDirectory(Utils::getBasename(fullPath)))
 			{
 				// Failed to create directory
 				errorStr = cocos2d::StringUtils::format("can not create directory %s\n", fullPath.c_str());
@@ -233,7 +233,7 @@ bool Utils::decompressZip(const std::string &zip, std::string& errorStr)
 		else
 		{
 			// Create all directories in advance to avoid issue
-			std::string dir = basename(fullPath);
+			std::string dir = Utils::getBasename(fullPath);
 			if (!cocos2d::FileUtils::getInstance()->isDirectoryExist(dir)) {
 				if (!cocos2d::FileUtils::getInstance()->createDirectory(dir)) {
 					// Failed to create directory
@@ -303,7 +303,7 @@ bool Utils::decompressZip(const std::string &zip, std::string& errorStr)
 }
 
 
-std::string Utils::basename(const std::string& path)
+std::string Utils::getBasename(const std::string& path)
 {
 	size_t found = path.find_last_of("/\\");
 
