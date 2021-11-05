@@ -5,7 +5,7 @@ PLATFORM_WINDOWS = "windows"
 PLATFORM_MAC 	 = "mac"
 PLATFORM_LINUX 	 = "linux"
 
-local httpRoot = "http://127.0.0.1:7878/game/"
+local httpRoot = "http://1.14.65.70:8100/game/"
 
 local M = {}
 
@@ -25,7 +25,7 @@ M["majorVersion"] = 0
 -- 次版本号
 M["minorVersion"] = 0
 -- 修订号
-M["revisionNumber"] = 3
+M["revisionNumber"] = 2
 
 -- 资源版本（重要，关系到是否更不更新）
 M["version"] = string.format("%d.%d.%d", M.majorVersion, M.minorVersion, M.revisionNumber)
@@ -72,7 +72,7 @@ M["strongUpdateDes"][PLATFORM_IOS] 		= "IOS我是强更新描述"
 
 -- 重启等级
 -- 说明：0->不需要重启 1->程序自动重启 2->用户手动重启
-M["restartLevel"] = 1
+M["restartLevel"] = 0
 
 
 
@@ -89,7 +89,7 @@ M["ignoreFileList"] =
 }
 
 -- 游戏资源文件目录
-M["resourceDir"] = lfs.currentdir().."/../../game/"
+M["resourceDir"] = lfs.currentdir().."/../../kurumi/"
 
 -- 输出文件目录
 M["outputDir"] = lfs.currentdir().."/archives/"

@@ -78,6 +78,7 @@ function doit()
     
     local progressBar = helper.Bar.new("")
 
+    -- 加密/处理文件,并将处理好的文件写入 assets 文件夹中缓存
     local assets = {}
     for k, v in pairs(files) do
         local fileName = string.sub(v, #rootDir + 2, -1)
@@ -215,7 +216,13 @@ function doit()
     helper.file_write(outDir .. "project_dev.manifest", projectJson)
 
     local manifestpath = rootDir .. "/res/version/project_dev.manifest"
-    --helper.file_write(manifestpath, projectJson)
+    helper.file_write(manifestpath, projectJson)
+
+
+    -- 不是散文件模式,删除 assets 文件夹
+    if not config["looseFileMode"] then
+        helper.rmdir(outDir .. "assets/")
+    end
 
     return true
 end
